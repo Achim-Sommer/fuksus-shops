@@ -1,6 +1,6 @@
 Config = {}
 
-Config.locale = 'en'
+Config.locale = 'de'
 
 Config.marker = {
     type = 0,
@@ -26,13 +26,23 @@ Config.shops = {
 			id = 59, colour = 69, scale = 0.8
 		},
         items = {
-            { type = 'food', name = 'burger', description = 'Wow there is a burger here', price = 10 },
-            { type = 'drink', name = 'water', description = 'Need something to drink ?', price = 10 },
-            { type = 'drink', name = 'cola', description = 'Fizzy', price = 10 },
+            { type = 'food', name = 'bread', description = 'Wow, hier gibt es einen Burger', price = 10 },
+            { type = 'drink', name = 'water', description = 'Brauchst du etwas zu trinken?', price = 10 },
+            { type = 'drink', name = 'coffee', description = 'Müde?', price = 10 },
+            { type = 'drink', name = 'cola', description = 'Eiskalt!', price = 20 },
+            { type = 'drink', name = 'mustard', description = 'Stillt Hunger und Durst', price = 20 },
+            { type = 'food', name = 'twix', description = 'Bock auf was Süßes?', price = 10 },
+            { type = 'food', name = 'doritos', description = 'Bock auf was Süßes?', price = 10 },
+            { type = 'items', name = 'scratch_ticket', description = 'Versuch dein Glück', price = 250 },
+            { type = 'items', name = 'medikit', description = 'Etwas Heilung?', price = 1000 },
+            { type = 'items', name = 'phone', description = 'Wer kann ohne?', price = 3000 },
+            { type = 'alc', name = 'beer', description = 'Naaaa?', price = 45 },
         },
         filters = {
-            food = 'Food',
-            drink = 'Drinks'
+            food = 'Essen',
+            drink = 'Trinken',
+            alc = 'Alkohol',
+            items = 'Items'
         },
         locations = {
             vec3(25.7, -1347.3, 29.49),
@@ -49,18 +59,27 @@ Config.shops = {
     },
     Liquor = {
 		name = "Rob's Liquor",
-        description = 'Need some hard liquor ?',
+        description = 'Brauchst du Schnaps? ?',
 		blip = {
 			id = 93, colour = 69, scale = 0.8
 		},
         items = {
-            { type = 'food', name = 'burger', description = 'Wow there is a burger here', price = 10 },
-            { type = 'drink', name = 'water', description = 'Need something to drink ?', price = 10 },
-            { type = 'drink', name = 'cola', description = 'Fizzy', price = 10 },
+            { type = 'food', name = 'bread', description = 'Wow, hier gibt es einen Burger', price = 10 },
+            { type = 'drink', name = 'water', description = 'Brauchst du etwas zu trinken?', price = 10 },
+            { type = 'drink', name = 'cola', description = 'Eiskalt!', price = 20 },
+            { type = 'drink', name = 'mustard', description = 'Stillt Hunger und Durst', price = 20 },
+            { type = 'food', name = 'twix', description = 'Bock auf was Süßes?', price = 10 },
+            { type = 'food', name = 'doritos', description = 'Bock auf was Süßes?', price = 10 },
+            { type = 'items', name = 'scratch_ticket', description = 'Versuch dein Glück', price = 250 },
+            { type = 'items', name = 'medikit', description = 'Etwas Heilung?', price = 1000 },
+            { type = 'items', name = 'phone', description = 'Wer kann ohne?', price = 3000 },
+            { type = 'alc', name = 'beer', description = 'Naaaa?', price = 45 },
         },
         filters = {
-            food = 'Food',
-            drink = 'Drinks'
+            food = 'Essen',
+            drink = 'Trinken',
+            alc = 'Alkohol',
+            items = 'Items'
         },
         locations = {
 			vec3(1135.808, -982.281, 46.415),
@@ -74,42 +93,25 @@ Config.shops = {
 	},
     YouTool = {
 		name = 'YouTool',
-        description = 'All your tools and gadgets in one place',
+        description = 'Alle deine Werkzeuge und Gadgets an einem Ort',
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, 
         items = {
-            { type = 'tool', name = 'lockpick', description = 'You better keep this a secret', price = 10 },
+            { type = 'tool', name = 'lockpick', description = 'Das solltest du besser geheim halten', price = 10 },
+            { type = 'tool', name = 'hose', description = 'Kann man immer gebrauchen', price = 10 },
+            { type = 'tool', name = 'WEAPON_WRENCH', description = 'Kann nützlich werden', price = 200 },
+            { type = 'tool', name = 'WEAPON_PETROLCAN', description = 'Falls der Tank leer geht', price = 150 },
+            { type = 'angel', name = 'fishingrod', description = 'Wie wäre es mit Angeln?', price = 250 },
+            { type = 'angel', name = 'fishbait', description = 'Ohne Köder wird es schwer einen Fisch zu fangen!', price = 50 },
         },
         filters = {
-            tool = 'Tools'
+            tool = 'Tools',
+            angel = 'Angelausrüstung'
         },
         locations = {
 			vec3(2748.0, 3473.0, 55.67),
 			vec3(342.99, -1298.26, 32.51)
-		}
-	},
-    PoliceArmoury = {
-		name = 'Police Armoury',
-        description = 'Grab your equipment',
-		jobs = {
-            ['police'] = 0
-        },
-		blip = {
-			id = 110, colour = 84, scale = 0.8
-		},
-        items = {
-			{ type = 'ammo', name = 'ammo-9', price = 5, },
-			{ type = 'ammo', name = 'ammo-rifle', price = 5, },
-			{ type = 'weapon', name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ type = 'weapon', name = 'WEAPON_NIGHTSTICK', price = 100 },
-		},
-        filters = {
-            weapon = 'Weapons',
-            ammo = 'Ammos'
-        },
-        locations = {
-			vec3(451.51, -979.44, 30.68)
 		}
 	},
 }

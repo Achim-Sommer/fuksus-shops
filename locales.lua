@@ -1,19 +1,19 @@
 Locales = {}
 
-Locales['en'] = {
+Locales['de'] = {
     ['ui'] = {
-        allItemsFilter = 'All items',
-        cart = 'Cart',
-        itemsInCart = 'in shopping cart',
-        paymentMethod = 'Select your payment method',
-        bank = 'Bank',
-        money = 'Cash',
-        moneyAmount = 'Total price',
-        pay = 'Pay for items',
-        addToCart = 'Add to cart'
+        allItemsFilter = 'Alle Artikel',
+        cart = 'Warenkorb',
+        itemsInCart = 'im Warenkorb',
+        paymentMethod = 'Wähle deine Zahlungsmethode',
+        bank = 'Karte',
+        money = 'Bar',
+        moneyAmount = 'Gesamtpreis',
+        pay = 'Für Artikel bezahlen',
+        addToCart = 'Zum Warenkorb hinzufügen'
     },
     ['game'] = {
-        notEnoughSpace = "You have insufficient space in your inventory. Money was returned to your account for the items you couldn't fit",
-        notEnoughMoney = "You don't have enoght balance in your selected payment method"
+        notEnoughSpace = "Du hast nicht genügend Platz in deinem Inventar. Für die Gegenstände, die du nicht unterbringen konntest, wurde Geld auf dein Konto zurückgebucht",
+        notEnoughMoney = "Du hast nicht genügend Guthaben auf der gewählten Zahlungsmethode."
     }
 }

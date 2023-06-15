@@ -19,15 +19,7 @@ local function setLocale()
     })
 end
 
-local function openShop(items, filters, name, description, jobs)
-    local canOpen = true
-    print(json.encode(jobs))
-    if next(jobs) then
-        canOpen = lib.callback.await('fuksus-shops:canOpen', false, jobs)
-    end
-    if not canOpen then
-        return print('Cant open')
-    end
+local function openShop(items, filters, name, description)
     SetNuiFocus(true, true)
     SendNUIMessage({
         type = 'main-container',
@@ -62,15 +54,14 @@ CreateThread(function()
                 items = data.items,
                 filters = data.filters,
                 name = data.name,
-                description = data.description,
-                jobs = data.jobs or {}
+                description = data.description
             })
 
             function point:nearby()
                 DrawMarker(Config.marker.type, self.coords, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.marker.scale.x, Config.marker.scale.y, Config.marker.scale.z, Config.marker.color.r, Config.marker.color.g, Config.marker.color.b, Config.marker.color.a, false, Config.marker.face, 2, false, false, false, false) 
 
                 if self.isClosest and self.currentDistance < 1.2 and IsControlJustReleased(0, 38) then
-                    openShop(self.items, self.filters, self.name, self.description, self.jobs)
+                    openShop(self.items, self.filters, self.name, self.description)
                 end
             end
         end
